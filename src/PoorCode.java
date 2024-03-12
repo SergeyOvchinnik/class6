@@ -115,7 +115,7 @@ return indexOfTopEven;}
 		
 		System.out.println("Mean = " + mean);
 		
-		double[] sorted = b(arr);
+		double[] sorted = bubbleSort(arr);
 		
 		double median;
 		
@@ -163,12 +163,20 @@ return indexOfTopEven;}
 		
 	}
 	
-	public static double[] b(double[] arr) {
+	public static double[] bubbleSort(double[] arr) {
+		
+		//create a copy of the array to sort
 		double[] sortingArr = Arrays.copyOf(arr, arr.length);
+		/*
+		*	O of n would be n to power 2 
+		* Loops through all elements of the array
+		 ***/
 		for(int i = 0; i < sortingArr.length - 1; i++)
 			for(int j = i + 1; j < sortingArr.length; j++)
 				if(sortingArr[i] > sortingArr[j]) {
+					//temporarily stores a variable to switch
 					double temp = sortingArr[i];
+					//switches i and j if they pass the if condition
 					sortingArr[i] = sortingArr[j];
 					sortingArr[j] = temp;
 				}
