@@ -1,5 +1,5 @@
-# open-class
-open-class repository for COMP8860
+# class6
+class6 repository for COMP8860
 
 This repository contains the following Java classes:
 
