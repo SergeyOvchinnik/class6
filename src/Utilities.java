@@ -3,7 +3,14 @@ public class Utilities {
 	
 	// Counts how many times the value n appears in the array arr
 	public static int countOccurences(int[] arr, int n) {
-		return 0; // TODO: implement
+		int count = 0;
+		for (int num: arr) {
+			if (num == n);{
+			count++;
+			}
+		}
+		return count;
+		//return 0; // TODO: implement
 	}
 	
 	// Checks if the value n is between top and bottom
