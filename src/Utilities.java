@@ -16,7 +16,7 @@ public class Utilities {
 	// Checks if the value n is between top and bottom
 	// Returns true if it is, false otherwise
 	public static boolean inRange(int n, int top, int bottom) {
-		return false; // TODO: implement
+		return (n >= bottom && n <= top)
 	}
 	
 	// Returns an integer which is a reverse of the input integer
