@@ -168,8 +168,8 @@ return indexOfTopEven;}
 		//create a copy of the array to sort
 		double[] sortingArr = Arrays.copyOf(arr, arr.length);
 		/*
-		*	O of n would be n to power 2 
-		* Loops through all elements of the array
+		*O of n would be n to power 2 
+		*Loops through all elements of the array
 		 ***/
 		for(int i = 0; i < sortingArr.length - 1; i++)
 			for(int j = i + 1; j < sortingArr.length; j++)
