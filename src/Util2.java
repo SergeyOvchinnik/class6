@@ -38,4 +38,25 @@ public class Util2 {
 		return arr;
 	}
 	
+	// Checks if n is a prime number 
+	public static boolean prime(int n) {
+		for(int i = 1; i <= n; i++) {
+			if(n % i == 0)
+				return false;
+		}
+		return true;
+	}
+	
+	public static String arrayMaxMin(int[] arr) {
+		int max = arr[0];
+		int min = arr[0];
+		for(int i = 0; i < arr.length; i++) {
+			if(arr[i] > max)
+				max = arr[i];
+			if(arr[i] < min)
+				min = arr[i];
+		}
+		return "Max is " + max + ", Min is " + min;
+	}
+	
 }
