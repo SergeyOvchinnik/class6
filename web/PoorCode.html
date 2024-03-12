@@ -25,31 +25,11 @@ if(  arr[i] > topEven    ) {{topEven
 return indexOfTopEven;
 }
 // Method evaluateConditions
-// Takes in three integers and checks condition based on the parameters and returns either true or false
+// Takes in integer c and boolean value a and b 
+// Checks condition based on the parameters and returns either true or false
 function evaluateConditions(a, b, c) {
 	if(c >0) {
-		if(a == false) {
-			if(b == true) {
-				return true ;
-			} else {
-				return false;
-			}
-		}
-		else {
-			if(b == false){
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
-	}
-	else 
-		if(c < 0) {
-		if(b == true && a ==true) return false;
-		if(a==false && b == false) return false;
-		return true;
+		return a != b;
 	}
 	return false;
 }
