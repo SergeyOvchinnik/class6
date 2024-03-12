@@ -55,7 +55,7 @@ public class PoorCode {
 	}
 
 	public static int locateTopEven(int[] arr) {
-		int topEven = Integer.MIN_VALUE, indexOfTopEven = 0;
+		int topEven = Integer.MIN_VALUE, indexOfTopEven = 1;
 		for (int i = 0; i < arr.length; i++) {
 			if (arr[i] % 2 == 0) {
 				if (arr[i] > topEven) {
