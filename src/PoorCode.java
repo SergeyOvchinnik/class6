@@ -187,10 +187,10 @@ return indexOfTopEven;}
 	}
 	
 	// Converts integer array to string
-	public  static String intArrayToString(int [] arr) 
-	{
-		if(arr == null)		return "null"; // if null then "null"
-String out = "[";
+	public  static String intArrayToString(int [] arr) {
+		if(arr == null)		
+			return "null"; // if null then "null"
+		StringConstructor out = new StringConstructor"[";
 		for(int i =   0;i<arr.length; i++) {
 			if(i > 0)
 			out = out + ", "; { // add comma when necessary
@@ -198,7 +198,7 @@ String out = "[";
 			}}  /* TODO: fix this */
 			out = out + "]";
 			// Close the array
-	return out; // return out;
+		return out;
 	}
 
 	// Big Sergio Comp8860 -> bIG sERGIO cOMP8860
