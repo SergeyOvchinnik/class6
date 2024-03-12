@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script>
+	function addOne(n) {
+		return n + 1;
+	}
+
+	function subtractOne(n) {
+		return n - 1;
+	}
+</script>
+
+</head>
+
+<body>
+
+	<form>
+		<label for="num">Number</label>
+		<input type="text" id="num" name="num"><br><br>
+	</form>
+
+	<button onclick="getElementById('num').value = addOne(getElementById('num').value)">Add One</button>
+	<button onclick="getElementById('num').value = subtractOne(getElementById('num').value)">Subtract One</button>
+
+</body>
+</html>

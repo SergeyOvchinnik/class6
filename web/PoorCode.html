@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+// Method x
+// Takes in three string parameters and prints out the greeting
+// First parameter serves as the title, second as the first name and second is the surname
+function x(a, b, c) {
+	document.write("Hello, " + a + " " + b + " " + c);
+}
+
+function 
+locateTopEven(arr) {
+let topEven =     Number.MIN_VALUE;  let indexOfTopEven
+= 0;
+  for(let i =0; (   i < arr.length); i   ++) {if      (arr[i] % 2
+		== 0) {
+if(  arr[i] > topEven    ) {{topEven
+		= arr[i];}
+		indexOfTopEven = i;
+		}}}
+return indexOfTopEven;
+}
+
+function evaluateConditions(a, b, c) {
+	if(c >0) {
+		if(a == false) {
+			if(b == true) {
+				return true ;
+			} else {
+				return false;
+			}
+		}
+		else {
+			if(b == false){
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+	}
+	else 
+		if(c < 0) {
+		if(b == true && a ==true) return false;
+		if(a==false && b == false) return false;
+		return true;
+	}
+	return false;
+}
+
+function printStats(arr) {
+	
+	let length = arr.length;
+	
+	document.write("Length = " + length);
+	document.write("</br>");
+	
+	let sum = 0.0;
+	for(let i = 0; i < arr.length; i++)
+		sum += arr[i];
+	
+	document.write("Sum = " + sum);
+	document.write("</br>");
+	
+	let n = arr.length;
+	
+	let mean = sum / n;
+	
+	document.write("Mean = " + mean);
+	document.write("</br>");
+	
+	let sorted = b(arr);
+	
+	let median;
+	
+	if(sorted.length % 2 == 1)
+		median = sorted[Math.floor(sorted.length/2)];
+	else
+		median = (sorted[Math.floor(sorted.length/2) - 1] + sorted[Math.floor(sorted.length/2)]) / 2.0;
+	
+	document.write("Median = " + median);
+	document.write("</br>");
+	
+	let mode = sorted[0];
+	let topOccurrences = 0;
+	let currentNumber = sorted[0];
+	let occurrences = 0;
+	
+	for(let i = 0; i < sorted.length; i++) {
+		if(sorted[i] == currentNumber) {
+			occurrences++;
+			if(occurrences > topOccurrences) {
+				topOccurrences = occurrences;
+				mode = currentNumber;
+			}
+		}
+		else {
+			currentNumber = sorted[i];
+			occurrences = 1;
+		}
+	}
+	
+	document.write("Mode = " + mode);
+	document.write("</br>");
+	
+	let variance = 0.0;
+	
+	for(let i = 0; i < arr.length; i++) {
+		let diff = arr[i] - mean;
+		variance += diff * diff;
+	}
+	variance /= length;
+	
+	document.write("Variance = " + variance);
+	document.write("</br>");
+	
+	let standardDeviation = Math.sqrt(variance);
+	
+	document.write("Standard Deviation = " + standardDeviation);
+	document.write("</br>");
+	
+}
+
+function b(arr) {
+	let sortingArr = [];
+	for(let i = 0; i < arr.length; i++)
+		sortingArr[i] = arr[i];
+	for(let i = 0; i < sortingArr.length - 1; i++)
+		for(let j = i + 1; j < sortingArr.length; j++)
+			if(sortingArr[i] > sortingArr[j]) {
+				let temp = sortingArr[i];
+				sortingArr[i] = sortingArr[j];
+				sortingArr[j] = temp;
+			}
+	return sortingArr;
+}
+
+
+// True for 2, 3, 5, 7, 11, 13 ...
+// False for 1, 4, 6, 8, 9, 10, 12 ...
+function p(n) {
+	if(n <= 1)
+		return false;
+	for(let i = 2; i < n; i++)
+		if(n % i == 0)
+			return false;
+	return true;
+}
+
+
+// Converts array to string
+function   arrayToString( arr) 
+{
+	if(arr == null)		return "null"; // if null then "null"
+let out = "[";
+	for(let i =   0;i<arr.length; i++) {
+		if(i > 0)
+		out = out + ", "; { // add comma when necessary
+		out = out + arr[i];
+			}}  /* TODO: fix this */
+		out = out + "]";
+		// Close the array
+return out; // return out;
+}
+
+
+// Big Sergio Comp8860 -> bIG sERGIO cOMP8860
+function casing(s) {
+	let out = "";
+	for(let i = 0; i < s.length; i++) {
+		if(s.charAt(i) == s.charAt(i).toUpperCase()) {
+			out = out + s.charAt(i).toLowerCase();
+		}
+		else
+			if(s.charAt(i) == s.charAt(i).toLowerCase()) 
+				out = out + s.charAt(i).toUpperCase();
+			else
+				out = out + s.charAt(i);
+}
+	return out;
+}
+
+function howMany(f, t, k, z) {
+	if(f == true) {
+		if(k == false) {
+			if(z && t)
+				return 3;
+			if(z || t)
+				return 2;
+			return 1;
+		}
+		else {
+			if(z == true) {
+				if(t) return 4;
+				else return 3;
+			}
+			if(t == true) {
+				if(z) return 4;
+				else return 3;
+			}
+			else return 2; 
+		}
+	}
+	if(k && t && z) {
+		return 3;
+	}
+	if(k || z || t) {
+		let number = 0;
+		if(k && z) number = number + 2;
+		else if(z || k) number ++;
+		number+=(t?1:0);
+		return number;
+	}
+	return 0;
+}
+
+
+
+x("Mr", "Sergey", "Ovchinnik");
+document.write("</br>");
+document.write("</br>");
+
+let arr = [5, 8, 3, 4, 2, 9, 6];
+document.write("Top even is " + locateTopEven(arr));
+
+document.write("</br>");
+document.write("</br>");
+document.write("evaluateConditions(false, false, -1) = " + evaluateConditions(false, false, -1));
+document.write("</br>");
+document.write("evaluateConditions(false, true, -1) = " + evaluateConditions(false, true, -1));
+document.write("</br>");
+document.write("evaluateConditions(true, false, -1) = " + evaluateConditions(true, false, -1));
+document.write("</br>");
+document.write("evaluateConditions(true, true, -1) = " + evaluateConditions(true, true, -1));
+document.write("</br>");
+document.write("evaluateConditions(false, false, 0) = " + evaluateConditions(false, false, 0));
+document.write("</br>");
+document.write("evaluateConditions(false, true, 0) = " + evaluateConditions(false, true, 0));
+document.write("</br>");
+document.write("evaluateConditions(true, false, 0) = " + evaluateConditions(true, false, 0));
+document.write("</br>");
+document.write("evaluateConditions(true, true, 0) = " + evaluateConditions(true, true, 0));
+document.write("</br>");
+document.write("evaluateConditions(false, false, 1) = " + evaluateConditions(false, false, 1));
+document.write("</br>");
+document.write("evaluateConditions(false, true, 1) = " + evaluateConditions(false, true, 1));
+document.write("</br>");
+document.write("evaluateConditions(true, false, 1) = " + evaluateConditions(true, false, 1));
+document.write("</br>");
+document.write("evaluateConditions(true, true, 1) = " + evaluateConditions(true, true, 1));
+document.write("</br>");
+document.write("</br>");
+
+let arr2 = [3.0, 4.0, 3.5, 4.0, 6.0, 5.0, 5.5, 6.6, 6.1];
+printStats(arr2);
+document.write("</br>");
+
+document.write(arrayToString([1, 2, 3, 4, 5]));
+document.write("</br>");
+document.write("</br>");
+
+document.write(casing("Big Sergio Comp8860"));
+document.write("</br>");
+document.write("</br>");
+
+</script>
+
+</body>
+</html>
