@@ -3,13 +3,20 @@ public class Utilities {
 	
 	// Counts how many times the value n appears in the array arr
 	public static int countOccurences(int[] arr, int n) {
-		return 0; // TODO: implement
+		int count = 0;
+		for (int num: arr) {
+			if (num == n);{
+			count++;
+			}
+		}
+		return count;
+		//return 0; // TODO: implement
 	}
 	
 	// Checks if the value n is between top and bottom
 	// Returns true if it is, false otherwise
 	public static boolean inRange(int n, int top, int bottom) {
-		return false; // TODO: implement
+		return (n >= bottom && n <= top)
 	}
 	
 	// Returns an integer which is a reverse of the input integer
@@ -33,7 +40,13 @@ public class Utilities {
 	// If x is even, returns x/2
 	// If x is odd, returns 3x+1
 	public static int threeXPlusOne(int x) {
-		return 0; // TODO: implement
+		if(x % 2 == 0) {
+			return x / 2;
+		}
+		
+		else {
+			return x * 3 + 1;
+		}
 	}
 	
 	// Prints the number n to console n times
@@ -52,7 +65,7 @@ public class Utilities {
 	// False otherwise
 	// E.g. ordered(1, 2, 3, 4) is true but ordered(1, 2, 4, 3) is false
 	public static boolean ordered(int a, int b, int c, int d) {
-		return false; // TODO: implement
+		return a < b && b < c && c < d;
 	}
 
 }
