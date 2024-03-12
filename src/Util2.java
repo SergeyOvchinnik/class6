@@ -48,6 +48,14 @@ public class Util2 {
 	}
 	
 	public static String arrayMaxMin(int[] arr) {
+		if(arr == null){
+			return "Input is null";
+		}
+		
+		if(arr.length == 0){
+			return "No Input";
+		}
+
 		int max = arr[0];
 		int min = arr[0];
 		for(int i = 0; i < arr.length; i++) {
