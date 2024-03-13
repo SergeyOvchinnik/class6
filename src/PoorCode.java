@@ -53,19 +53,18 @@ public class PoorCode {
 		System.out.println("Hello, " + a + " " + b + " " + c);
 	}
 	
-public 
-static 
-int   locateTopEven(int[] arr) 
-	  {
-int topEven =   Integer.MIN_VALUE, indexOfTopEven
-= 0;
-  for(int i =0; (   i < arr.length);i  ++){if   (arr[i] % 2 
-    == 0) {
-if(  arr[i] > topEven   )    {{topEven 
-	 	= arr[i];}
-		indexOfTopEven = i;
-				}}}
-return indexOfTopEven;}
+public static int locateTopEven(int[] arr) {
+		int topEven = Integer.MIN_VALUE, indexOfTopEven = 1;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] % 2 == 0) {
+				if (arr[i] > topEven) {
+					topEven = arr[i];
+					indexOfTopEven = i;
+				}
+			}
+		}
+		return indexOfTopEven;
+}
 	
 	
 	public static boolean evaluateConditions(boolean a,boolean b, int c) {
