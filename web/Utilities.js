@@ -33,7 +33,7 @@ function threeXPlusOne(x) {
 	return 0; // TODO: implement
 }
 
-## Edited
+// Edited
 
 function threeXPlusOne(x) {
 	if (x % 2 == 0) {
