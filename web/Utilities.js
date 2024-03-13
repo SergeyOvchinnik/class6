@@ -33,6 +33,17 @@ function threeXPlusOne(x) {
 	return 0; // TODO: implement
 }
 
+// Edited
+
+function threeXPlusOne(x) {
+	if (x % 2 == 0) {
+		console.log(x / 2);
+	} else {
+		console.log(3*x + 1 )
+	}
+	return
+}
+
 // Prints the number n to console n times
 // E.g. for n = 3, it should print "3 3 3"
 function printNNtimes(n) {
