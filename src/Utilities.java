@@ -52,7 +52,13 @@ public class Utilities {
 	// Prints the number n to console n times
 	// E.g. for n = 3, it should print "3 3 3"
 	public static void printNNtimes(int n) {
-		return; // TODO: implement
+		if(n>0){
+			for(int i = 0; i < n; i++){
+				System.out.print(n + " ");
+			}
+		} else {
+			System.out.println("Please enter a number greater than zero.")
+		}
 	}
 	
 	// Returns n to the power of e
