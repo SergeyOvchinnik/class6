@@ -49,5 +49,9 @@ function power(n, e) {
 // False otherwise
 // E.g. ordered(1, 2, 3, 4) is true but ordered(1, 2, 4, 3) is false
 function ordered(a, b, c, d) {
-	return false; // TODO: implement
+	if (a < b && b < c && c < d){
+	return true;
+}
+else {
+	return false;
 }
