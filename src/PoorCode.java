@@ -50,7 +50,7 @@ public class PoorCode {
 	 * 
 	 */
 	public static void x(String a, String b, String c) {
-		System.out.println("Hello, " + a + " " + b + " " + c);
+		System.out.println("Hello, + a + b + c);
 	}
 	
 public static int locateTopEven(int[] arr) {
